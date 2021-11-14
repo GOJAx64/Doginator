@@ -11,25 +11,23 @@
 
 	<main>
 		<?php
-		//CONECTAMOS CON LA BD
-		require "conexion.php";
+			require "connection.php";
+			//OBTENEMOS EL NÚMERO DEL NODO DENTRO DEL ÁRBOL (PARA SABER QUÉ CAMINO HEMOS TOMADO)
+			$nodo = 1;
+			$nodoRepuesto = 0;
+			$numPregunta = 1;
+			$proxPregunta = 2;
 
-		//OBTENEMOS EL NÚMERO DEL NODO DENTRO DEL ÁRBOL (PARA SABER QUÉ CAMINO HEMOS TOMADO)
-		$nodo = 1;
-		$nodoRepuesto = 0;
-		$numPregunta = 1;
-		$proxPregunta = 2;
-
-		if (isset($_GET['n'])) {
-			$nodo = $_GET["n"];
-		}
-		if (isset($_GET['r'])) {
-			$nodoRepuesto = $_GET["r"];
-		}
-		if (isset($_GET['np'])) {
-			$numPregunta = $_GET["np"];
-			$proxPregunta = $numPregunta + 1;
-		}
+			if (isset($_GET['n'])) {
+				$nodo = $_GET["n"];
+			}
+			if (isset($_GET['r'])) {
+				$nodoRepuesto = $_GET["r"];
+			}
+			if (isset($_GET['np'])) {
+				$numPregunta = $_GET["np"];
+				$proxPregunta = $numPregunta + 1;
+			}
 
 		//------------------------------------------------------
 		//SI HAY UN NODO DE REPUESTO SE AÑADE A LA LISTA (ARRAY)
@@ -78,7 +76,7 @@
 		$texto = '';
 		$pregunta = true;
 
-		if ($resultado = mysqli_query($enlace, $consulta)) {
+		if ($resultado = mysqli_query($link, $consulta)) {
 			if ($resultado->num_rows === 0) {
 				echo 'No existe el nodo';
 			} else {
@@ -127,7 +125,7 @@
 		<?php
 			echo "<div class='contenedorRespuestas'>";
 				echo "<a class='botonFooter' href='index.php?n=1&r=0'>Volver a probar</a>";
-				echo "<a class='botonFooter' href='datos.php'>Datos de Doginator</a>";
+				echo "<a class='botonFooter' href='game_data.php'>Datos de Doginator</a>";
 			echo "</div>";
 		?>
 	</footer>
