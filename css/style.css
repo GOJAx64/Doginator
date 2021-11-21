@@ -71,3 +71,17 @@ footer {
 	background-color: #A5A5A5;
 	border-radius: 15px;
 }
+
+.buttonForm{
+	width: 30%;
+	height: 6%;
+	margin-top: 29px;
+	text-align: center;
+	border-radius: 15px;       
+	background-color: #A5A5A5;
+	text-decoration: none;
+}
+
+.input{
+	width: 90%;
+}

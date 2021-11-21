@@ -22,12 +22,12 @@
 					echo "<textarea id='previousName' name='previousName' form='replyForm' placeholder='nombre' style='display:none;'>" .$p. "</textarea>";
 
 					echo "<h2>¿En cuál perro habías pensado?</h2>";
-					echo "<textarea id='name' name='name' form='replyForm' placeholder='nombre'></textarea>";
+					echo "<textarea class='input' id='name' name='name' form='replyForm' placeholder='Raza'></textarea>";
 					echo "<h2>¿Qué característica tiene este perro que no tenga un " .$p. "?</h2>";
-					echo "<textarea id='features' name='features' form='replyForm' placeholder='caracteristicas'></textarea>";
+					echo "<textarea class='input' id='features' name='features' form='replyForm' placeholder='Característica'></textarea>";
 
 					echo "<form action='create.php' id='replyForm' method='POST' >";
-						echo "<button type='submit' name='send'>ENVIAR</button>";
+						echo "<button class='buttonForm' type='submit' name='send'>ENVIAR</button>";
 					echo "</form>";
 				echo "</div>";
 			}
