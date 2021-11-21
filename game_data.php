@@ -1,13 +1,11 @@
 <html>
 <head>
 	<title>DOGINATOR</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-	<header>
-		<h1>DOGINATOR</h1>
-	</header>
+	<header> <h1>DOGINATOR</h1> </header>
 
 	<main>
 		<?php
@@ -66,8 +64,8 @@
 
 	<footer>
 		<?php
-			echo "<div class='contenedorRespuestas'>";
-				echo "<a class='botonFooter' href='index.php?n=1&r=0'>Volver a probar</a>";
+			echo "<div class='answerContainer'>";
+				echo "<a class='buttonFooter' href='index.php?n=1&r=0'>Volver a probar</a>";
 			echo "</div>";
 		?>
 	</footer>

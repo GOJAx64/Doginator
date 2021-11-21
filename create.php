@@ -2,16 +2,16 @@
     require "connection.php";
 
     //Collect the parameters by URL
-    $node = $_POST['nodo'];
-    $name = $_POST['nombre'];
+    $node = $_POST['node'];
+    $name = $_POST['name'];
     $features = $_POST['caracteristicas'];
-    $previousName = $_POST['nombreAnterior'];
+    $previousName = $_POST['previousName'];
 
     //New nodes
     $leftChild = $node * 2;
     $rightChild = $node * 2 + 1;
-    $NombreHijoI = $name;
-    $NombreHijoD = $previousName;
+    //$NombreHijoI = $name;
+    //$NombreHijoD = $previousName;
 
     //Save new data ang record game
     $query = "INSERT INTO arbol (nodo,texto,pregunta) VALUES('".$leftChild."','".$name."',FALSE);";

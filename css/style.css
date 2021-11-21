@@ -22,7 +22,7 @@ main{
 	padding-bottom: 5px;
 }
 
-.contenedorPregunta{
+.questionContainer{
 	background-color: none;
 	padding-top: 1em;
 	padding-bottom: 3em;
@@ -33,12 +33,12 @@ textarea{
 	width:100%;
 }
 
-.contenedorRespuestas{
+.answerContainer{
 	display: flex;
 	padding: ;
 }
 
-.boton{
+.button{
 	width: 100%;
 	margin: 7px;
 	text-align: center;
@@ -48,12 +48,12 @@ textarea{
 	text-decoration: none;
 	color: black;
 }
-.boton:hover{
+.button:hover{
 	background-color: orange;
 	color: #FFFFFF;
 }
 
-.botonFooter{
+.buttonFooter{
 	width: 100%;
 	margin: 7px;
 	text-align: center;
