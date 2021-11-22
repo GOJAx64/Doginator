@@ -52,7 +52,7 @@
 				}
 			}
 			else { 	//Save the hit
-				$query = "INSERT INTO partida (personaje,acierto) VALUES('".$previousName."',TRUE);";
+				$query = "INSERT INTO game (personage,hit) VALUES('".$previousName."',TRUE);";
 				mysqli_query($link, $query);
 
 				session_start(); //Delete the session variable with a new intantiation

@@ -61,7 +61,7 @@
 				$oppositeRandomNode = $nodeNo;
 			}
 
-			$query = "SELECT texto,pregunta FROM arbol WHERE nodo = ".$node.";";
+			$query = "SELECT text,question FROM tree WHERE node = ".$node.";";
 			$text = '';
 			$question = true;
 

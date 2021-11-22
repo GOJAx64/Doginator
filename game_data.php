@@ -12,7 +12,7 @@
 			require "connection.php";
 
 			//Registered characters
-			$query = "SELECT COUNT(*) FROM arbol WHERE pregunta = 0";
+			$query = "SELECT COUNT(*) FROM tree WHERE question = 0";
 			$number = '0';
 			if ($result = mysqli_query($link, $query)) {
 				while ($row = mysqli_fetch_row($result)) {
@@ -24,7 +24,7 @@
 			echo "<hr>";
 
 			//Hits
-			$query = "SELECT COUNT(*) FROM partida WHERE acierto = TRUE";
+			$query = "SELECT COUNT(*) FROM game WHERE hit = TRUE";
 			$number = '0';
 			if ($result = mysqli_query($link, $query)) {
 				while ($row = mysqli_fetch_row($result)) {
@@ -36,7 +36,7 @@
 			echo "<hr>";
 
 			//Failures
-			$query = "SELECT COUNT(*) FROM partida WHERE acierto = FALSE";
+			$query = "SELECT COUNT(*) FROM game WHERE hit = FALSE";
 			$number = '0';
 			if ($result = mysqli_query($link, $query)) {
 				while ($row = mysqli_fetch_row($result)) {
@@ -48,7 +48,7 @@
 			echo "<hr>";
 
 			//Last characters played
-			$query = "SELECT personaje FROM partida ORDER BY id DESC LIMIT 5";
+			$query = "SELECT personage FROM game ORDER BY id DESC LIMIT 5";
 			$name = '';
 			echo "<h3>ÚLTIMOS PERSONAJES JUGADOS</h3>";
 			if ($result = mysqli_query($link, $query)) {
