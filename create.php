@@ -10,8 +10,6 @@
     //New nodes
     $leftChild = $node * 2;
     $rightChild = $node * 2 + 1;
-    //$NombreHijoI = $name;
-    //$NombreHijoD = $previousName;
 
     //Save new data ang record game
     $query = "INSERT INTO tree (node,text,question) VALUES('".$leftChild."','".$name."',FALSE);";

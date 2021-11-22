@@ -78,7 +78,7 @@
 					echo "<h2>PREGUNTA #" . $questionNumber . "</h2>";
 					if ($question == 0) { //If it's not a question is a final result
 						echo "<div class='questionContainer'>";
-							echo "<h2>¿Has pensado en " .$text. "?</h2>";
+							echo "<h2>¿Has pensado en un " .$text. "?</h2>";
 						echo "</div>";
 						echo "<div class='answerContainer'>";
 							echo "<a class='button' href='answer.php?r=1&n=" .$node. "&p=" .$text. "&np=" .$nextQuestion. "'>SÍ</a>";
@@ -87,7 +87,7 @@
 					}
 					else { //If it's a question, we ask (If in doubt, in the 'r' parameter we save the alternativa branch, it;s not value zero)
 						echo "<div class='questionContainer'>";
-							echo "<h2>¿Tu perro es ".$text."?</h2>";
+							echo "<h2>¿Tu perro ".$text."?</h2>";
 						echo "</div>";
 						echo "<div class='answerContainer'>";
 							echo "<a class='button' href='index.php?n=" .$nodeYes. "&r=0&np=" .$nextQuestion. "'>SÍ</a>";
